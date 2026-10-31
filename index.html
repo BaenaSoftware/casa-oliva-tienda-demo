@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f3ed">
-  <title>Casa Oliva — demo de tienda</title>
-  <link rel="stylesheet" href="styles.min.css">
+  <meta name="theme-color" content="#f4eee6">
+  <meta name="description" content="Demostración interactiva de una tienda online de moda.">
+  <title>Tu marca — demo de tienda online</title>
+  <link rel="stylesheet" href="styles-demo.min.css">
 </head>
-<body data-theme="editorial">
-  <div class="demo-ribbon"><span class="pulse"></span> DEMO INTERACTIVA <span class="ribbon-note">Todo es ficticio · los cambios se guardan en este navegador</span></div>
-  <header class="topbar">
-    <a class="brand" href="#tienda" aria-label="Casa Oliva inicio"><span class="brand-mark">co.</span><span>CASA <b>OLIVA</b><small>OBJETOS PARA VIVIR MEJOR</small></span></a>
-    <nav class="main-nav" aria-label="Navegación principal"><a href="#tienda" data-page="tienda">Tienda</a><a href="#coleccion" data-page="coleccion">Colección</a><a href="#nosotros" data-page="nosotros">Nuestra historia</a></nav>
-    <div class="top-actions"><button class="icon-btn" id="searchBtn" title="Buscar" aria-label="Buscar">⌕</button><button class="icon-btn bag-btn" id="cartBtn" aria-label="Carrito">♧ <i id="cartCount">0</i></button><button class="account-btn" id="accountBtn">Mi cuenta <span>↗</span></button><button class="mobile-menu" id="menuBtn" aria-label="Abrir menú">☰</button></div>
+<body data-theme="mediterranea">
+  <div class="demo-note"><span class="pulse"></span> DEMO FUNCIONAL <span>Catálogo, pedidos y cuentas ficticios · los cambios se guardan en este navegador</span></div>
+  <div class="theme-bar" aria-label="Diseños disponibles">
+    <span>Explora los diseños</span>
+    <button data-theme="editorial">Editorial</button>
+    <button data-theme="mediterranea">Mediterránea</button>
+    <button data-theme="street">Street</button>
+    <button data-theme="premium">Premium</button>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#tienda" aria-label="Tu marca, inicio"><span class="brand-symbol">T</span><span class="brand-name">TU MARCA<small>MODA PARA CADA DÍA</small></span></a>
+    <nav class="main-nav" aria-label="Colecciones">
+      <a href="#coleccion/mujer">Mujer</a><a href="#coleccion/hombre">Hombre</a><a href="#coleccion/infantil">Infantil</a><a href="#coleccion/novedades">Novedades</a>
+    </nav>
+    <div class="header-actions"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar prendas" aria-label="Buscar prendas"></label><button class="header-link" data-page="cuenta">Mi cuenta</button><button class="header-link bag-link" data-page="carrito">Bolsa <span id="cart-count">0</span></button><button class="mobile-menu" id="menu-toggle" aria-label="Abrir menú">☰</button></div>
   </header>
-  <main id="app"></main>
-  <footer class="site-footer"><div class="footer-brand">CASA OLIVA<small>Menos cosas. Mejores cosas.</small></div><div>Envío gratuito a partir de 60 €<br>Devoluciones sencillas durante 30 días</div><div class="footer-links"><a href="#envios">Envíos y devoluciones</a><a href="#contacto">Contacto</a><a href="#privacidad">Privacidad</a></div><span>© 2026 Casa Oliva · Tienda de demostración</span></footer>
+  <main id="app" tabindex="-1"></main>
+  <footer class="site-footer"><div class="footer-brand">TU MARCA<small>Una tienda pensada para ti.</small></div><div>Envío y recogida · Ayuda con tus pedidos</div><nav aria-label="Información"><a href="#envios">Envíos y devoluciones</a><a href="#contacto">Contacto</a><a href="#privacidad">Privacidad</a></nav><a href="#cuenta">Mi cuenta</a><span>© 2026 · Demo interactiva, sin pagos reales</span></footer>
   <aside class="demo-dock" aria-label="Controles de demostración">
-    <label class="role-label">Vista de demostración<select id="roleSelect"><option value="shopper">Cliente · tienda</option><option value="customer">Cliente · mi cuenta</option><option value="employee">Empleado · pedidos y productos</option><option value="admin">Administrador · gestión completa</option></select></label>
-    <label class="theme-label">Tema<select id="themeSelect"><option value="editorial">Editorial</option><option value="mediterranean">Mediterráneo</option><option value="street">Street</option><option value="premium">Premium</option></select></label>
-    <button id="resetBtn" class="reset-btn" title="Restaurar datos de ejemplo">↻ <span>Restaurar demo</span></button>
+    <span class="dock-title">MOSTRAR COMO</span>
+    <label><span class="sr-only">Vista de demostración</span><select id="role-select"><option value="shopper">Cliente · tienda</option><option value="customer">Cliente · Mi cuenta</option><option value="employee">Empleado · catálogo y pedidos</option><option value="admin">Administrador · gestión completa</option></select></label>
+    <button id="reset-demo" class="reset-btn" title="Restaurar los datos de ejemplo">↻ Restaurar demo</button>
   </aside>
-  <dialog id="modal"></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.min.js"></script>
+  <dialog id="dialog"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app-demo.min.js"></script>
 </body>
 </html>
-
