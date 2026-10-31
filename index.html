@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>Casa Oliva — demo de tienda</title>
+  <link rel="stylesheet" href="styles.min.css">
+</head>
+<body data-theme="editorial">
+  <div class="demo-ribbon"><span class="pulse"></span> DEMO INTERACTIVA <span class="ribbon-note">Todo es ficticio · los cambios se guardan en este navegador</span></div>
+  <header class="topbar">
+    <a class="brand" href="#tienda" aria-label="Casa Oliva inicio"><span class="brand-mark">co.</span><span>CASA <b>OLIVA</b><small>OBJETOS PARA VIVIR MEJOR</small></span></a>
+    <nav class="main-nav" aria-label="Navegación principal"><a href="#tienda" data-page="tienda">Tienda</a><a href="#coleccion" data-page="coleccion">Colección</a><a href="#nosotros" data-page="nosotros">Nuestra historia</a></nav>
+    <div class="top-actions"><button class="icon-btn" id="searchBtn" title="Buscar" aria-label="Buscar">⌕</button><button class="icon-btn bag-btn" id="cartBtn" aria-label="Carrito">♧ <i id="cartCount">0</i></button><button class="account-btn" id="accountBtn">Mi cuenta <span>↗</span></button><button class="mobile-menu" id="menuBtn" aria-label="Abrir menú">☰</button></div>
+  </header>
+  <main id="app"></main>
+  <footer class="site-footer"><div class="footer-brand">CASA OLIVA<small>Menos cosas. Mejores cosas.</small></div><div>Envío gratuito a partir de 60 €<br>Devoluciones sencillas durante 30 días</div><div class="footer-links"><a href="#envios">Envíos y devoluciones</a><a href="#contacto">Contacto</a><a href="#privacidad">Privacidad</a></div><span>© 2026 Casa Oliva · Tienda de demostración</span></footer>
+  <aside class="demo-dock" aria-label="Controles de demostración">
+    <label class="role-label">Vista de demostración<select id="roleSelect"><option value="shopper">Cliente · tienda</option><option value="customer">Cliente · mi cuenta</option><option value="employee">Empleado · pedidos y productos</option><option value="admin">Administrador · gestión completa</option></select></label>
+    <label class="theme-label">Tema<select id="themeSelect"><option value="editorial">Editorial</option><option value="mediterranean">Mediterráneo</option><option value="street">Street</option><option value="premium">Premium</option></select></label>
+    <button id="resetBtn" class="reset-btn" title="Restaurar datos de ejemplo">↻ <span>Restaurar demo</span></button>
+  </aside>
+  <dialog id="modal"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.min.js"></script>
+</body>
+</html>
+
