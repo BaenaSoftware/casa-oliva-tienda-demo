@@ -6,26 +6,24 @@
   <meta name="theme-color" content="#f4eee6">
   <meta name="description" content="Demostración interactiva de una tienda online de moda.">
   <title>Tu marca — demo de tienda online</title>
+  <link rel="stylesheet" href="assets/css/woocommerce-layout.css">
+  <link rel="stylesheet" href="assets/css/woocommerce-smallscreen.css" media="only screen and (max-width: 768px)">
+  <link rel="stylesheet" href="assets/css/woocommerce.css">
   <link rel="stylesheet" href="styles-demo.min.css">
 </head>
 <body data-theme="mediterranea">
-  <div class="demo-note"><span class="pulse"></span> DEMO FUNCIONAL <span>Catálogo, pedidos y cuentas ficticios · los cambios se guardan en este navegador</span></div>
-  <div class="theme-bar" aria-label="Diseños disponibles">
-    <span>Explora los diseños</span>
-    <button data-theme="editorial">Editorial</button>
-    <button data-theme="mediterranea">Mediterránea</button>
-    <button data-theme="street">Street</button>
-    <button data-theme="premium">Premium</button>
-  </div>
+  <nav class="theme-switcher-bar" aria-label="Diseño de la demo"><div class="theme-switcher">
+    <button class="theme-btn" data-theme="editorial">Editorial</button><button class="theme-btn" data-theme="mediterranea">Mediterránea</button><button class="theme-btn" data-theme="street">Street</button><button class="theme-btn" data-theme="premium">Premium</button>
+  </div></nav>
+  <div class="announcement-bar"><p>Envío gratis en tu pedido de demostración · Prueba la tienda sin pagos reales</p></div>
   <header class="site-header">
-    <a class="brand" href="#tienda" aria-label="Tu marca, inicio"><span class="brand-symbol">T</span><span class="brand-name">TU MARCA<small>MODA PARA CADA DÍA</small></span></a>
-    <nav class="main-nav" aria-label="Colecciones">
-      <a href="#coleccion/mujer">Mujer</a><a href="#coleccion/hombre">Hombre</a><a href="#coleccion/infantil">Infantil</a><a href="#coleccion/novedades">Novedades</a>
-    </nav>
-    <div class="header-actions"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar prendas" aria-label="Buscar prendas"></label><button class="header-link" data-page="cuenta">Mi cuenta</button><button class="header-link bag-link" data-page="carrito">Bolsa <span id="cart-count">0</span></button><button class="mobile-menu" id="menu-toggle" aria-label="Abrir menú">☰</button></div>
+    <div class="header-main"><a class="site-brand brand" href="#tienda"><span class="brand-symbol" hidden></span><span class="brand-name">Tu marca</span></a>
+    <div class="header-search"><form id="search-form" class="woocommerce-product-search"><label class="sr-only" for="search">Buscar por:</label><input id="search" class="search-field" type="search" placeholder="Buscar productos…" aria-label="Buscar por:"><button type="submit">Buscar</button></form></div>
+    <div class="header-actions"><a class="account-link" href="#cuenta">Mi cuenta</a><a class="cart-link" href="#carrito">Bolsa (<span id="cart-count">0</span>)</a><button id="menu-toggle" hidden aria-label="Abrir menú">☰</button></div></div>
+    <nav class="site-nav main-nav" aria-label="Navegación principal"><ul><li><a href="#tienda">Inicio</a></li><li><a href="#coleccion/mujer">Mujer</a></li><li><a href="#coleccion/hombre">Hombre</a></li><li><a href="#coleccion/infantil">Infantil</a></li><li><a href="#coleccion/novedades">Novedades</a></li></ul></nav>
   </header>
   <main id="app" tabindex="-1"></main>
-  <footer class="site-footer"><div class="footer-brand">TU MARCA<small>Una tienda pensada para ti.</small></div><div>Envío y recogida · Ayuda con tus pedidos</div><nav aria-label="Información"><a href="#envios">Envíos y devoluciones</a><a href="#contacto">Contacto</a><a href="#privacidad">Privacidad</a></nav><a href="#cuenta">Mi cuenta</a><span>© 2026 · Demo interactiva, sin pagos reales</span></footer>
+  <footer class="site-footer"><p class="footer-brand">Tu marca · 2026</p><p><a href="#cuenta">Mi cuenta y pedidos</a> · <a href="#envios">Envíos y devoluciones</a> · <a href="#privacidad">Privacidad</a></p></footer>
   <aside class="demo-dock" aria-label="Controles de demostración">
     <span class="dock-title">MOSTRAR COMO</span>
     <label><span class="sr-only">Vista de demostración</span><select id="role-select"><option value="shopper">Cliente · tienda</option><option value="customer">Cliente · Mi cuenta</option><option value="employee">Empleado · catálogo y pedidos</option><option value="admin">Administrador · gestión completa</option></select></label>
